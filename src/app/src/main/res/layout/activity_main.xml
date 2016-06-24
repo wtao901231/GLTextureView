@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/activity_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="minus.android.opengl.MainActivity">
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/gl_surface_view"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/opengl_logo"
+            android:alpha="0.5"/>
+
+        <minus.android.support.opengl.GLTextureView
+            android:id="@+id/gl_texture_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.5"/>
+    </RelativeLayout>
+
+</LinearLayout>
