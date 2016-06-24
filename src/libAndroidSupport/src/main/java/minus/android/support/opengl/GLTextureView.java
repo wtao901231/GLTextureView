@@ -517,29 +517,17 @@ public class GLTextureView extends TextureView implements TextureView.SurfaceTex
         Log.e(TAG, "setSurfaceTextureListener preserved, setRenderer() instead?");
     }
 
-    /**
-     * This method is part of the SurfaceHolder.Callback interface, and is
-     * not normally called or subclassed by clients of GLTextureView.
-     */
     @Override
     public void onSurfaceTextureAvailable(SurfaceTexture surface, int width, int height) {
         mGLThread.surfaceCreated();
         onSurfaceTextureSizeChanged(surface, width, height);
     }
 
-    /**
-     * This method is part of the SurfaceHolder.Callback interface, and is
-     * not normally called or subclassed by clients of GLTextureView.
-     */
     @Override
     public void onSurfaceTextureSizeChanged(SurfaceTexture surface, int width, int height) {
         mGLThread.onWindowResize(width, height);
     }
 
-    /**
-     * This method is part of the SurfaceHolder.Callback interface, and is
-     * not normally called or subclassed by clients of GLTextureView.
-     */
     @Override
     public boolean onSurfaceTextureDestroyed(SurfaceTexture surface) {
         // Surface will be destroyed when we return
